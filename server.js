@@ -1,6 +1,9 @@
 var express = require('express');
 var app = express();
 app.get('/', function(req, res){
-   res.send("Hello World!");
+   res.render("Hello World!");
 });
-app.listen(8080, 'private_ip_address');
+const privateIP = 172.31.25.246
+app.listen(3000, 'privateIP', () = > {
+	console.log(`Listening on ${privateIP}:3000`)
+});
