@@ -1,7 +1,11 @@
 var express = require('express');
 var app = express();
+
+app.set('view engine', 'ejs');
+
+
 app.get('/', function(req, res){
-   res.render("Hello World!");
+   res.render("index");
 });
 const publicIP = '34.203.34.86'
 const privateIP = '172.31.25.246'
